@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Wilderness Echoes</title>
+    <link rel="stylesheet" href="style.css"> <!-- Main stylesheet (for potential shared styles) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        /* --- General Page Styles --- */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7; /* Slightly increased for better readability */
+            color: #444; /* Slightly softer than pure black */
+            background-color: #f4f7f6; /* Lighter, more neutral background */
+            margin: 0;
+            padding: 40px 20px; /* Add some padding around the form section */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center form section */
+            min-height: 100vh;
+        }
+
+        /* --- Form Section Container --- */
+        .join-us-section {
+            background-color: #ffffff;
+            max-width: 750px; /* Slightly reduced for better form proportion */
+            width: 100%;
+            margin: 0 auto 40px auto; /* Margin for spacing */
+            padding: 40px 30px; /* More internal padding */
+            border-radius: 12px; /* Softer corners */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+            text-align: left; /* Default text alignment for content */
+        }
+
+        @media (max-width: 800px) {
+            .join-us-section {
+                padding: 30px 20px;
+            }
+        }
+
+
+        /* --- Titles and Text --- */
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem; /* Slightly adjusted */
+            font-weight: 700;
+            color: #2c5d43; /* Main theme color */
+            margin-bottom: 10px;
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        /* --- Form Grid and Groups --- */
+        .join-form .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px; /* Increased gap */
+        }
+
+        .name-fields-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 500px) {
+            .name-fields-grid {
+                grid-template-columns: 1fr; /* Stack on small screens */
+            }
+        }
+
+
+        .form-group {
+            margin-bottom: 0; /* Gap is handled by form-grid */
+        }
+
+        .form-group label,
+        .form-group legend { /* Apply to legend as well */
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .required-asterisk {
+            color: #e74c3c; /* More distinct red */
+            margin-left: 3px;
+            font-weight: bold;
+        }
+
+        /* --- Input Fields Styling --- */
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px; /* More padding */
+            border: 1px solid #d1d5db; /* Softer border color */
+            border-radius: 6px; /* Softer radius */
+            box-sizing: border-box;
+            font-size: 0.95rem;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .form-group input[type="text"]::placeholder,
+        .form-group input[type="email"]::placeholder,
+        .form-group input[type="tel"]::placeholder,
+        .form-group textarea::placeholder {
+            color: #9ca3af; /* Lighter placeholder text */
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #2c5d43;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(44, 93, 67, 0.15); /* Softer focus ring */
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        /* --- Checkbox Group Styling --- */
+         fieldset.form-group { /* Specifically target the fieldset for interests */
+            border: none; /* Remove default fieldset border */
+            padding: 0;
+            margin: 0;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* Space between checkbox items */
+            margin-top: 5px;
+        }
+        .checkbox-group > div {
+            display: flex;
+            align-items: center;
+            position: relative; /* For custom checkbox styling if needed in future */
+        }
+        .checkbox-group input[type="checkbox"] {
+            accent-color: #2c5d43; /* Main theme color for checkbox */
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            flex-shrink: 0; /* Prevent shrinking */
+            cursor: pointer;
+        }
+         .checkbox-group label { /* Labels within checkbox group */
+            font-weight: normal;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: #444;
+            cursor: pointer;
+            line-height: 1.3;
+        }
+
+        /* --- Consent Group --- */
+        .consent-group {
+            display: flex;
+            align-items: center;
+            margin-top: 10px; /* Adjusted margin */
+        }
+        .consent-group input[type="checkbox"] {
+            accent-color: #2c5d43;
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        .consent-label {
+            font-size: 0.85rem; /* Slightly smaller */
+            color: #555;
+            line-height: 1.4;
+        }
+        .consent-label a {
+            color: #2c5d43;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        .consent-label a:hover {
+            text-decoration: none;
+        }
+
+
+        /* --- Submit Button Styling --- */
+        .cta-button {
+            background-color: #2c5d43; /* Main theme color */
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            display: inline-block; /* To control width with padding */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%; /* Make button full width */
+            max-width: 300px; /* But not too wide on large screens if centered */
+            margin: 0 auto; /* Center if max-width is applied */
+        }
+        .cta-button:hover {
+            background-color: #224b36; /* Darker shade on hover */
+            transform: translateY(-1px);
+        }
+        .cta-button:active {
+            transform: translateY(0px);
+        }
+
+        .form-group.text-center { /* Ensure the container for button allows centering if button not full width */
+            text-align: center;
+        }
+
+        /* --- Form Status Messages --- */
+        .form-status {
+            margin-top: 25px;
+            padding: 12px 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .form-status.success {
+            background-color: #e6f9f0; /* Lighter green */
+            color: #1a744a;
+            border: 1px solid #a3e9d1;
+        }
+        .form-status.error {
+            background-color: #fdecea; /* Lighter red */
+            color: #c53030;
+            border: 1px solid #f9bdbb;
+        }
+
+        /* --- Back Link Styling --- */
+        .back-link-container {
+            text-align: center;
+            margin-top: 40px; /* Increased spacing */
+        }
+        .back-link {
+            color: #2c5d43;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        .back-link:hover {
+            background-color: rgba(44, 93, 67, 0.1);
+            text-decoration: none;
+        }
+        .back-link .fa-arrow-left { /* If using an icon */
+            margin-right: 6px;
+        }
+        .animate-on-scroll, .animate-on-load {
+            opacity: 1; 
+        }
+
+        .is-visible {
+            opacity: 1 !important;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER REMOVED -->
+
+    <section id="join-us" class="content-section join-us-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Become a Wilderness Echo</h2>
+            <p class="section-intro animate-on-scroll" data-delay="0.1">
+                We believe collective action creates lasting change. Whether you can offer your time, skills, or support,
+                there's a place for you in our mission to protect the wild. Tell us how you'd like to connect.
+            </p>
+
+            <form id="joinForm" class="join-form" data-animation="fadeInUp" data-delay="0.2">
+                <div class="form-grid">
+                    <div class="name-fields-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span class="required-asterisk">*</span></label>
+                            <input type="text" id="firstName" name="firstName" placeholder="e.g., Naveed" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span class="required-asterisk">*</span></label>
+                            <input type="text" id="lastName" name="lastName" placeholder="e.g., Khan" required aria-required="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required-asterisk">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="e.g., naveed.khan@example.com" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g., (555) 123-4567">
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>How would you like to get involved? (Check all that apply) <span class="required-asterisk">*</span></legend>
+                        <div class="checkbox-group">
+                            <div>
+                                <input type="checkbox" id="interestVolunteer" name="interest[]" value="volunteer">
+                                <label for="interestVolunteer">Volunteering</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="interestDonate" name="interest[]" value="donate">
+                                <label for="interestDonate">Donating / Membership</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="interestNewsletter" name="interest[]" value="newsletter">
+                                <label for="interestNewsletter">Receive Newsletters & Updates</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="interestAdvocacy" name="interest[]" value="advocacy">
+                                <label for="interestAdvocacy">Advocacy & Awareness</label>
+                            </div>
+                             <div>
+                                <input type="checkbox" id="interestOther" name="interest[]" value="other">
+                                <label for="interestOther">Other (please specify below)</label>
+                            </div>
+                        </div>
+                        <input type="text" id="interest_group_validation" name="interest_group_validation" style="position: absolute; opacity: 0; height: 0; width: 0; pointer-events: none;" required_for_group="true">
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="skills">Relevant Skills or How You Can Help (Optional)</label>
+                        <textarea id="skills" name="skills" rows="3" placeholder="e.g., Photography, writing, fundraising, local fieldwork, admin support..."></textarea>
+                    </div>
+
+                     <div class="form-group">
+                        <label for="availability">General Availability (if volunteering)</label>
+                        <input type="text" id="availability" name="availability" placeholder="e.g., Weekends, weekday evenings, specific project duration">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Message or Questions (Optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group consent-group">
+                    <input type="checkbox" id="consentPrivacy" name="consentPrivacy" required aria-required="true">
+                    <label for="consentPrivacy" class="consent-label">I acknowledge and agree to the <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>. <span class="required-asterisk">*</span></label>
+                </div>
+        
+
+                <div class="form-group text-center" style="margin-top: 30px;"> 
+                    <button type="submit" class="cta-button">Send My Interest</button>
+                </div>
+
+                <div id="form-status-message" class="form-status"></div>
+            </form>
+
+            <div class="back-link-container">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Basic JavaScript 
+        const joinForm = document.getElementById('joinForm');
+        const formStatusMessage = document.getElementById('form-status-message');
+        const interestGroupValidationInput = document.getElementById('interest_group_validation');
+
+        if (joinForm) {
+            joinForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default submission for now
+
+                const interestCheckboxes = joinForm.querySelectorAll('input[name="interest[]"]:checked');
+                if (interestCheckboxes.length === 0) {
+                    formStatusMessage.textContent = 'Please select at least one area of interest.';
+                    formStatusMessage.className = 'form-status error';
+                    const fieldset = joinForm.querySelector('fieldset');
+                    if (fieldset) {
+                        fieldset.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        // Add a temporary error indication to the legend or fieldset
+                        const legend = fieldset.querySelector('legend');
+                        if (legend) legend.style.color = '#c53030'; // Match error color
+                    }
+                    if(interestGroupValidationInput) interestGroupValidationInput.setCustomValidity("Please select at least one option.");
+                    return;
+                } else {
+                     if(interestGroupValidationInput) interestGroupValidationInput.setCustomValidity("");
+                     const fieldset = joinForm.querySelector('fieldset');
+                     const legend = fieldset.querySelector('legend');
+                     if (legend) legend.style.color = ''; // Reset legend color
+                }
+
+                formStatusMessage.textContent = 'Thank you! Submitting your interest...';
+                formStatusMessage.className = 'form-status';
+
+                setTimeout(() => {
+                    formStatusMessage.textContent = 'Your interest has been successfully submitted! We will be in touch soon.';
+                    formStatusMessage.className = 'form-status success';
+                    joinForm.reset();
+                }, 2000);
+            });
+        }
+
+        const allInterestCheckboxes = document.querySelectorAll('input[name="interest[]"]'); // Query from document if joinForm might not exist initially
+        allInterestCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                if (interestGroupValidationInput) interestGroupValidationInput.setCustomValidity("");
+                if (formStatusMessage.textContent === 'Please select at least one area of interest.') {
+                    formStatusMessage.textContent = '';
+                    formStatusMessage.className = 'form-status';
+                }
+                // Reset legend color if it was changed
+                const fieldset = checkbox.closest('fieldset');
+                if (fieldset) {
+                    const legend = fieldset.querySelector('legend');
+                    if (legend && legend.style.color === 'rgb(197, 48, 48)') { // Check for the error color
+                        legend.style.color = '';
+                    }
+                }
+            });
+        });
+
+        // Animation Logic (from previous step, ensure it works with the new styles)
+        const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-on-load');
+
+        // Set initial opacity to 0 for elements that will be animated
+        animatedElements.forEach(el => {
+            if (el.classList.contains('animate-on-scroll') || el.classList.contains('animate-on-load')) {
+                el.style.opacity = '0'; // Start hidden for JS-driven animation
+            }
+        });
+
+        const animationObserver = new IntersectionObserver((entries, observerInstance) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const delay = parseFloat(el.dataset.delay) || 0;
+                    const animationName = el.dataset.animation;
+
+                    setTimeout(() => {
+                        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out'; // Add transition before making visible
+                        el.style.opacity = '1';
+                        // el.classList.add('is-visible'); // You can use a class or direct style
+                        if (animationName) {
+                         
+                        }
+                    }, delay * 1000);
+                    observerInstance.unobserve(el);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animatedElements.forEach(el => {
+            if (el.classList.contains('animate-on-load')) {
+                 const delay = parseFloat(el.dataset.delay) || 0;
+                 setTimeout(() => {
+                    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                    el.style.opacity = '1';
+                 }, delay * 1000);
+            } else if (el.classList.contains('animate-on-scroll')) {
+                
+                animationObserver.observe(el);
+            } else {
+                el.style.opacity = '1'; // Ensure non-animated elements are visible
+            }
+        });
+    </script>
+</body>
+</html>

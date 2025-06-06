@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilderness Echoes - Discover the Wild</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="nav-logo">WildEcho</a>
+            <ul class="nav-menu">
+                <li><a href="#our-mission" class="nav-link">Our Mission</a></li>
+                <li><a href="#species" class="nav-link">Species</a></li>
+                <li><a href="#habitats" class="nav-link">Habitats</a></li>
+                <li><a href="#conservation" class="nav-link">Conservation</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-video-container">
+            <!-- Replace with your video or use a high-res image -->
+            <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80" alt="Wildlife Background" class="hero-bg-image">
+            <!-- <video autoplay muted loop id="heroVideoBg">
+                <source src="path/to/your/wildlife_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+        </div>
+        <div class="hero-content">
+            <h1 class="animate-on-load" data-delay="0.2">Whispers of the Wild</h1>
+            <p class="animate-on-load" data-delay="0.4">Journey into the heart of nature's untamed beauty. Discover, learn, protect.</p>
+            <a href="#our-mission" class="cta-button animate-on-load" data-delay="0.6">Explore Our World <i class="fas fa-chevron-down"></i></a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 2: Our Mission -->
+        <section id="our-mission" class="content-section mission-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Our Sacred Duty</h2>
+                <div class="mission-content">
+                    <div class="mission-text animate-on-scroll" data-animation="fadeInLeft">
+                        <p>We are dedicated to the preservation of Earth's diverse wildlife and their natural habitats. Through research, education, and direct action, we strive to create a world where humans and wildlife thrive together in harmony.</p>
+                        <p>Our mission is to inspire a deeper understanding and appreciation for the natural world, fostering a global community committed to conservation and sustainable living.</p>
+                        <a href="#conservation" class="learn-more-link">Learn About Our Impact <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="mission-image-container animate-on-scroll" data-animation="fadeInRight">
+                        <img src="images/conver.jpeg" alt="Conservation efforts">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Species Spotlight -->
+        <section id="species" class="content-section species-section alt-bg">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Meet the Inhabitants</h2>
+                <div class="species-grid">
+                    <div class="species-card animate-on-scroll" data-animation="zoomIn">
+                        <img src="images/bengal.jpeg" alt="Tiger">
+                        <div class="species-info">
+                            <h3>Bengal Tiger</h3>
+                            <p>The majestic apex predator of Asian jungles, known for its iconic stripes.</p>
+                            <a href="#" class="card-cta">Discover More <i class="fas fa-paw"></i></a>
+                        </div>
+                    </div>
+                    <div class="species-card animate-on-scroll" data-animation="zoomIn" data-delay="0.2">
+                        <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1772&q=80" alt="Elephant">
+                        <div class="species-info">
+                            <h3>African Elephant</h3>
+                            <p>Earth's largest land animal, a gentle giant with complex social structures.</p>
+                            <a href="#" class="card-cta">Discover More <i class="fas fa-paw"></i></a>
+                        </div>
+                    </div>
+                    <div class="species-card animate-on-scroll" data-animation="zoomIn" data-delay="0.4">
+                        <img src="images/scral.jpeg" alt="Macaw">
+                        <div class="species-info">
+                            <h3>Scarlet Macaw</h3>
+                            <p>A vibrant parrot gracing the rainforests with its brilliant plumage.</p>
+                            <a href="#" class="card-cta">Discover More <i class="fas fa-paw"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Explore Habitats (Unique Horizontal Scroll Concept) -->
+        <section id="habitats" class="content-section habitats-section">
+            <h2 class="section-title animate-on-scroll">Worlds Within Worlds</h2>
+            <div class="habitats-scroll-container">
+                <div class="habitat-card animate-on-scroll" data-animation="slideUp">
+                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Rainforest">
+                    <div class="habitat-info">
+                        <h3>Rainforests</h3>
+                        <p>Lush, biodiverse ecosystems teeming with life.</p>
+                    </div>
+                </div>
+                <div class="habitat-card animate-on-scroll" data-animation="slideUp" data-delay="0.1">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1773&q=80" alt="Oceans">
+                    <div class="habitat-info">
+                        <h3>Oceans</h3>
+                        <p>Vast underwater realms of mystery and wonder.</p>
+                    </div>
+                </div>
+                <div class="habitat-card animate-on-scroll" data-animation="slideUp" data-delay="0.2">
+                    <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Savannah">
+                    <div class="habitat-info">
+                        <h3>Savannahs</h3>
+                        <p>Open grasslands supporting iconic megafauna.</p>
+                    </div>
+                </div>
+                <div class="habitat-card animate-on-scroll" data-animation="slideUp" data-delay="0.3">
+                    <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Arctic">
+                    <div class="habitat-info">
+                        <h3>Arctic Tundra</h3>
+                        <p>Frozen landscapes, home to resilient creatures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Conservation & Get Involved -->
+        <section id="conservation" class="content-section conservation-section alt-bg">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Be Their Voice</h2>
+                <div class="conservation-grid">
+                    <div class="action-card animate-on-scroll" data-animation="fadeInUp">
+                        <i class="fas fa-hand-holding-heart icon-large"></i>
+                        <h3>Donate</h3>
+                        <p>Your contribution directly supports our field projects and research.</p>
+                        <a href="#" class="cta-button-outline">Give Today</a>
+                    </div>
+                    <div class="action-card animate-on-scroll" data-animation="fadeInUp" data-delay="0.2">
+                        <i class="fas fa-hands-helping icon-large"></i>
+                        <h3>Volunteer</h3>
+                        <p>Join our passionate team and make a hands-on difference for wildlife.</p>
+                        <a href="join.html" class="cta-button-outline">Join Us</a>
+                    </div>
+                    <div class="action-card animate-on-scroll" data-animation="fadeInUp" data-delay="0.4">
+                        <i class="fas fa-bullhorn icon-large"></i>
+                        <h3>Advocate</h3>
+                        <p>Spread awareness and champion policies that protect our planet.</p>
+                        <a href="#" class="cta-button-outline">Speak Up</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Wildlife Gallery / Latest News (Hybrid) -->
+        <section id="gallery" class="content-section gallery-section">
+            <div class="container">  
+                <h2 class="section-title animate-on-scroll">Through the Lens</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item animate-on-scroll" data-animation="scaleUp">
+                        <img src="images/ench.jpeg" alt="Wildlife photo 1">
+                        <div class="gallery-overlay"><span>Enchanting Owl</span></div>
+                    </div>
+                     <div class="gallery-item animate-on-scroll" data-animation="scaleUp" data-delay="0.1">
+                        <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Wildlife photo 2">
+                        <div class="gallery-overlay"><span>Leopard's Gaze</span></div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="scaleUp" data-delay="0.2">
+                        <img src="images/Sea Turtle's Journey.jpeg" alt="Wildlife photo 3">
+                        <div class="gallery-overlay"><span>Sea Turtle's Journey</span></div>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-animation="scaleUp" data-delay="0.3">
+                        <img src="https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Wildlife photo 4">
+                        <div class="gallery-overlay"><span>Wolf Pack</span></div>
+                    </div>
+                </div>
+                <div class="text-center animate-on-scroll" data-delay="0.4">
+                    <a href="#" class="cta-button" style="margin-top: 2rem;">View Full Gallery</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Simplified Contact) -->
+    <footer id="contact" class="footer-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Connect With Us</h2>
+            <p class="animate-on-scroll" data-delay="0.1">Join the conversation and help us protect the wild.</p>
+            <div class="social-icons animate-on-scroll" data-delay="0.2">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">© <span id="currentYear"></span> Wilderness Echoes. All Rights Reserved. Protecting nature, one echo at a time.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
