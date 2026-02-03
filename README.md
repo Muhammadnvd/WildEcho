@@ -63,6 +63,7 @@ WildEcho/
 │   └── images/
 │── README.md
 
+
 🌱 Future Enhancements
 
 Wildlife data API integration
