@@ -53,6 +53,7 @@ Open index.html in your browser.
 No build tools or dependencies required.
 
 📂 Project Structure
+
 WildEcho/
 │── index.html
 │── css/
