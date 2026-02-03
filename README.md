@@ -40,7 +40,7 @@ Demonstrate modern front-end UI/UX practices
 
 Clone the repository:
 
-git clone https://github.com/your-username/wildecho.git
+git clone https://github.com/Muhammadnvd/wildecho.git
 
 
 Navigate to the project folder:
