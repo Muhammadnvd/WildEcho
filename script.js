@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set current year in footer
     if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
+        currentYearSpan.textContent = new Date().getFullYear();    
     }
 
     // Navbar scroll effect
