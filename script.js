@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 title.classList.add('in-view');
             }
         });
-    });
+    });    
 
     // Mobile navigation toggle
     if (navToggle && navMenu) {
