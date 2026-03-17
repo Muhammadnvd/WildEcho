@@ -10,7 +10,7 @@ WildEcho is a modern, immersive wildlife website designed to promote wildlife aw
 
 🖼 Full-Screen Visuals – High-impact wildlife imagery and hero sections
 
-🐾 Interactive Species Cards – Hover and click interactions for species exploration
+🐾 Interactive Species Cards – Hover and click interactions for species exploration    
 
 🌍 Horizontal Habitat Scrolling – Smooth horizontal sections showcasing habitats
 
