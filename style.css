@@ -24,7 +24,7 @@ html {
     font-size: 16px; /* Base font size */
 }
 
-body {
+body {  
     font-family: var(--font-body);
     background-color: var(--primary-dark);
     color: var(--text-light);
