@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentYearSpan = document.getElementById('currentYear');
 
     // Set current year in footer
-    if (currentYearSpan) {
+    if (currentYearSpan) {      
         currentYearSpan.textContent = new Date().getFullYear();    
     }
 
